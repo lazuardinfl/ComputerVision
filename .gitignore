@@ -1,2 +1,6 @@
 *.env
 .devcontainer/ca/
+
+__pycache__/
+*.py[cod]
+*$py.class
