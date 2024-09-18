@@ -1,0 +1,26 @@
+{
+	"name": "CV",
+	"build": { "dockerfile": "Dockerfile" },
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.quickSuggestions": {
+					"other": "on",
+					"comments": "off",
+					"strings": "on"
+				},
+				"editor.occurrencesHighlight": "off",
+				"editor.guides.bracketPairs": true,
+				"editor.guides.bracketPairsHorizontal": false,
+				"editor.bracketPairColorization.enabled": true,
+				"explorer.sortOrder": "type",
+				"terminal.integrated.cursorStyle": "line"
+			},
+			"extensions": [
+				"VisualStudioExptTeam.vscodeintellicode"
+			]
+		}
+	},
+	"runArgs": ["--env-file", ".devcontainer/.env"],
+	"initializeCommand": [".devcontainer/init.sh"]
+}
