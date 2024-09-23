@@ -21,6 +21,6 @@
 			]
 		}
 	},
-	"runArgs": ["--env-file", ".devcontainer/.env"],
+	"runArgs": ["--env-file", ".devcontainer/.env", "--ipc", "host"],
 	"initializeCommand": [".devcontainer/init.sh"]
 }
