@@ -1,5 +1,5 @@
 *.env
-.devcontainer/ca/
+ca/
 
 __pycache__/
 *.py[cod]

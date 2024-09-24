@@ -4,18 +4,16 @@
 # must exist to prevent container build error
 
 # create .env file if not exist
-if [ ! -f .devcontainer/.env ]; then
-    touch .devcontainer/.env
+if [ ! -f .env ]; then
+    touch .env
 fi
 
-# create ca directory if not exist
-mkdir -p .devcontainer/ca
-
-# create file inside ca directory
-cat << EOF > .devcontainer/ca/README.md
+# create ca directory and one file if not exist
+mkdir -p ca
+cat << EOF > ca/README.md
 put root CA file here with \`.crt\` extension \\
 don't delete this file
 EOF
 
 # copy custom root CA from default linux ca directory
-\cp /usr/local/share/ca-certificates/* .devcontainer/ca/ 2>/dev/null || true
+\cp /usr/local/share/ca-certificates/* ca/ 2>/dev/null || true

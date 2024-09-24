@@ -1,5 +1,6 @@
 # from random import choice
 # from string import ascii_lowercase
+import cv2
 from datetime import datetime
 from ultralytics import YOLO
 
@@ -18,4 +19,14 @@ def func3():
     model = YOLO("models/helm.pt")
     model.track("resources/vd/helm.mp4", stream=False, save=True, project="results", name="vd", exist_ok=True)
 
-func3()
+def func4():
+    fourcc = cv2.VideoWriter_fourcc(*'MJPG')
+    out = cv2.VideoWriter('output.avi', fourcc, 25, (640, 384))
+    model = YOLO("yolov8n.pt")
+    results = model.predict("protocol://stream-url", stream=True)
+    for r in results:
+        out.write(r.plot())
+    out.release()
+    cv2.destroyAllWindows()
+
+func4()
