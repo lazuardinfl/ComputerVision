@@ -17,7 +17,8 @@
 				"terminal.integrated.cursorStyle": "line"
 			},
 			"extensions": [
-				"VisualStudioExptTeam.vscodeintellicode"
+				"VisualStudioExptTeam.vscodeintellicode",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	},
