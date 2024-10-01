@@ -29,4 +29,14 @@ def func4():
     out.release()
     cv2.destroyAllWindows()
 
-func4()
+def func5():
+    model = YOLO("models/helm.pt")
+    url = "protocol://stream-url"
+    # results = model.track(url, stream=True, show=False, save=True, stream_buffer=True, imgsz=640, project="results", name="vd", exist_ok=True)
+    results = model.track(url, stream=True, show=True)
+    for r in results:
+        pass
+        # print(r.to_json())
+        # print(r.summary())
+
+func5()

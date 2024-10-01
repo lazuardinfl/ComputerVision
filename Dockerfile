@@ -18,7 +18,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
 COPY .env requirements.txt ./
 RUN --mount=type=cache,target=/root/.cache/pip \
     export $(grep -v '^#' .env | xargs -d '\n') \
-    && pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu --disable-pip-version-check \
+    && pip install -r requirements.txt --disable-pip-version-check \
     && rm .env requirements.txt
 ## end dev
 

@@ -1,5 +1,6 @@
 *.env
 ca/
+ignore
 
 __pycache__/
 *.py[cod]

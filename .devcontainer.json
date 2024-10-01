@@ -26,6 +26,7 @@
             ]
         }
     },
+    "hostRequirements": { "gpu": "optional" },
     "runArgs": ["--env-file", ".env", "--ipc", "host"],
     "initializeCommand": ["./init.sh"]
 }
