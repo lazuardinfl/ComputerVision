@@ -17,3 +17,6 @@ EOF
 
 # copy custom root CA from default linux ca directory
 \cp /usr/local/share/ca-certificates/* ca/ 2>/dev/null || true
+
+# create cache directory for pip
+mkdir -p ~/.devcache/.cache/pip
